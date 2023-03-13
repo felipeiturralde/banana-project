@@ -14,8 +14,8 @@ Code for each agent is in the `pi_navigation/agent` directory, and the file nome
 
 ## Table of Contents
 - [Training the agents](#training-the-agents)
-  - [The Learning Process](#the_learning_process)
-  - [The Training Process](#the_training_process)
+  - [The Learning Process](#the-learning-process)
+  - [The Training Process](#the-training-process)
 - [Analysis](#analysis)
 - [Report](#report)
 
@@ -35,8 +35,6 @@ The [Train_Agent](agent/training.py) class orchestrates the agents learning proc
     The agent is trained for n_episodes or untill it reaches target_score.
     Each episode lasts max_t interactions.
     
-    The function keeps tract of 
-    
     Args:
     - n_episodes (int) default 2500: number of episodes to train the agent for
     
@@ -55,6 +53,10 @@ The [Train_Agent](agent/training.py) class orchestrates the agents learning proc
     
     - exp_replay_alpha (float) default 0.2: Value of the priority tuning parameter alpha
       for the experience selection priority
+      
+    Returns:
+    - agent (object): Instance of agent_implementation
+    - training_data (DataFrame): contains details of the training session
     """
 
 ```
@@ -63,7 +65,7 @@ The [Train_Agent](agent/training.py) class orchestrates the agents learning proc
 The `run` function in the [Navigation](Navigation.ipynb) notebook implements a training session for a set of agents.  
 > The **Training one agent** section in the Navigation notebook shows how to train one agent for one session
 
-To train the agents, after correctly configuring the computing environment (see [The Setup](../#the-setup) section in the project README file for setup instructions), execute the cells under the `Initialize notebook setings` and `Training Process` sections.  You can then select to `Train one agent`, or `Train all agents`.
+To train the agents, after correctly configuring the computing environment (see [The Setup](/../../#the-setup) section in the project README file for setup instructions), execute the cells under the `Initialize notebook setings` and `Training Process` sections.  You can then select to `Train one agent`, or `Train all agents`.
 
 ## Analysis
 Please see the [Analysis](Analysis.ipynb) notebook for a breakdown of the learning data.
