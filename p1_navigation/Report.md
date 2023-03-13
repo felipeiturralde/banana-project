@@ -3,10 +3,10 @@
 For this project I implemented four learning improvements to the standard Deep Q-Learning method.  I used this improvements in different combinations to implement three different agens, and trained five instances of these agents to solve the P1 challenge.
 
 ## Table of contents
-- [Implemented improvements](Implemented improvements)
-- [DNN model architecture](DNN_model_architecture)
-- [The Agents](The_Agents)
-- [Results](Results)
+- [Implemented improvements](#implemented-improvements)
+- [DNN model architecture](#dnn-model-architecture)
+- [The Agents](#the-agents)
+- [Results](#results)
 
 ## Implemented improvements
 ### 1. Fixed Q-Targets
@@ -62,7 +62,8 @@ I trained five different instances with the following settings:
 
 ## Results
 All agents were trained 5 different times (_sessions = 5_) and the _learning speed_ was computed as the average number of learning episodes over all sessions:
-$$learning\_speed = \frac{\sum_{s = 1}^{5} total\_episodes_s}{sessions}$$
+$$\text{learning_speed} = \frac{\sum_{s=1}^{5} \text{total_episodes}_{s}}{sessions}$$
+
 All agents achieved a _learning_speed_ < 700, and while _dqn_agent_1_2_3_ was the fastest learner, it seems like _dqn_agent_1_3_4_01_ has a bigger learning potential; as described by the learning rate graph.  
 The three fastest agents are:
 1. dqn_agent_1_2_3
