@@ -37,14 +37,14 @@ $$P_i = \frac{P_{i}^{a}}{\sum_{k}{P_{k}^a}}$$
 where the hyperparameter $a$ allows the computation to be set between fully _uniform probability_ ($a := 0$), and fully _priority_ ($a := 1$)
 
 - Add an _Importance-sampling weight_ term to the update rule in order to correct for any bias towards the priority values by amending the expectation over all experiences term
-$$\Delta\omega = \alpha \cdot (\frac{1}{N} \cdot \frac{1}{Pi})^{b}\delta_t\nabla_\omega \hat{q}(s, a; \omega)$$
+$$\Delta\omega = \alpha \cdot \left(\frac{1}{N} \cdot \frac{1}{Pi}\right)^{b}\delta_t\nabla_\omega \hat{q}(s, a; \omega)$$
 where $N$ is the __size__ of the _replay buffer_, and $b$ is a hyperparameter to control how much the weight affects learning
 
 ## DNN model architecture
 A fully connected 3 layer DNN with 128 unitsis architecture is [implemented for all agents](model/dqn_model.py).  Internal layers are _ReLu_ activated and weights ($\omega$) are initialized using the _genral rule_
 
 ## The Agents
-I implemented three different agents using a combination of the improvements described above:
+I implemented three different [agents](agent/) using a combination of the improvements described above:
 - **dqn_agent_1_2**: Implements Fixed Q-Targets and Experience Replay
 - **dqn_agent_1_2_3**: Implements Fixed Q-Targets, Experience Replay, and Double Q-Learning
 - **dqn_agent_1_3_4**: Implements Fixed Q-Targets, Prioritized Experience Replay, and Double Q-learning
@@ -62,9 +62,9 @@ I trained five different instances with the following settings:
 
 ## Results
 All agents were trained 5 different times (_sessions = 5_) and the _learning speed_ was computed as the average number of learning episodes over all sessions:
-$$\text{learning_speed} = \frac{\sum_{s=1}^{5} \text{total_episodes}_{s}}{sessions}$$
+$$learning–speed = \frac{\displaystyle\sum_{s=1}^{5} {total–episodes}_{s}}{sessions}$$
 
-All agents achieved a _learning_speed_ < 700, and while _dqn_agent_1_2_3_ was the fastest learner, it seems like _dqn_agent_1_3_4_01_ has a bigger learning potential; as described by the learning rate graph.  
+All agents achieved a _learning-speed_ < 700, and while _dqn_agent_1_2_3_ was the fastest learner, it seems like _dqn_agent_1_3_4_01_ has a bigger learning potential; as described by the learning rate graph.  
 The three fastest agents are:
 1. dqn_agent_1_2_3
 2. dqn_agent_1_3_4_005
