@@ -64,7 +64,7 @@ I trained five different instances with the following settings:
 All agents were trained 5 different times (_sessions = 5_) and the _learning speed_ was computed as the average number of learning episodes over all sessions:
 $$learning–speed = \frac{\displaystyle\sum_{s=1}^{5} {total–episodes}_{s}}{sessions}$$
 
-All agents achieved a _learning-speed_ < 700, and while _dqn_agent_1_2_3_ was the fastest learner, it seems like _dqn_agent_1_3_4_01_ has a bigger learning potential; as described by the learning rate graph.  
+All agents achieved a _learning-speed_ < 700, and while _dqn_agent_1_2_3_ was the fastest learner, it seems like _dqn_agent_1_3_4_01_ has a bigger learning potential; as described by the learning rate graph (see the [Analysis](Analysis.ipynb) notebook).  
 The three fastest agents are:
 1. dqn_agent_1_2_3
 2. dqn_agent_1_3_4_005
