@@ -11,10 +11,10 @@ This repository contains my submission to the course's Project 1
 
 ### Table of Contents
 
-- [The Project](#The_Project)
-- [The Environment](#The_Environment)
-- [The Setup](#The_Setup)
-- [The Agents](#The_Agents)
+- [The Project](#the-project)
+- [The Environment](#the-environment)
+- [The Setup](#the-setup)
+- [The Agents](#the-agents)
 
 ### The Project
 
@@ -68,5 +68,5 @@ Code for each agent is in the `pi_navigation/agent` directory, and the file nome
 - **dqn_agent_1_2_3**: Implements Fixed Q-Targets, Experience Replay, and Double Q-Learning
 - **dqn_agent_1_3_4**: Implements Fixed Q-Targets, Prioritized Experience Replay, and Double Q-learning
 
-Learn more about the training process and results by reading the [README](p1_navigation/README.md) in the `p1_navigation` directory
+Learn more about the training process and results by reading the [README](p1_navigation/) in the `p1_navigation` directory
 
