@@ -13,15 +13,17 @@ Code for each agent is in the `pi_navigation/agent` directory, and the file nome
 - **dqn_agent_1_3_4**: Implements Fixed Q-Targets, Prioritized Experience Replay, and Double Q-learning
 
 ## Table of Contents
-- [Training the agents](#Training_the_Agents)
-- [Training Performance Analysis](#Training_Performance_Analysis)
-- [Let the Agent navigate](#Let_the_Agent_navigate)
+- [Training the agents](#training-the-agents)
+  - [The Learning Process](#the_learning_process)
+  - [The Training Process](#the_training_process)
+- [Analysis](#analysis)
+- [Report](#report)
 
 ## Training the agents
 ### The Learning Process
 Each agent learns by interacting with the environment for as many episodes as are necessary for the agent to achieve a +13 mean score over 100 consecutive episodes.
 
-The Train_Agent class orchestrates the agents learning process by serving as the agent-environment interface.  The Train method sets up a training session for an agent.  It controls for how many episodes the agent is allowed to learn and how many discrete time steps make up an episode.  It also has defaults for target_score, and $\epsilon$-greedy and priority replay $\alpha$ learning hyperparameters
+The [Train_Agent](agent/training.py) class orchestrates the agents learning process by serving as the agent-environment interface.  The Train method sets up a training session for an agent.  It controls for how many episodes the agent is allowed to learn and how many discrete time steps make up an episode.  It also has defaults for target_score, and $\epsilon$-greedy and priority replay $a$ learning hyperparameters
 
 ```
   def Train(self, n_episodes = 2500, max_t = 1000, target_score = np.inf, 
@@ -58,10 +60,13 @@ The Train_Agent class orchestrates the agents learning process by serving as the
 ```
 
 ### The Training Process
-The `run` function in the Navigation notebook implements a training session for a set of agents.  
+The `run` function in the [Navigation](Navigation.ipynb) notebook implements a training session for a set of agents.  
 > The **Training one agent** section in the Navigation notebook shows how to train one agent for one session
 
-To train the agents, after correctly configuring the computing environment (see [The Setup](../README.md) section in the project README file for setup instructions), execute the cells under the `Initialize notebook setings` and `Training Process` sections.  You can then select to `Train one agent`, or `Train all agents`.
+To train the agents, after correctly configuring the computing environment (see [The Setup](../#the-setup) section in the project README file for setup instructions), execute the cells under the `Initialize notebook setings` and `Training Process` sections.  You can then select to `Train one agent`, or `Train all agents`.
 
-#### The Analysis
-For this project all the implemented agents were trained for 5 sessions, and the output learning data used for the analysis
+## Analysis
+Please see the [Analysis](Analysis.ipynb) notebook for a breakdown of the learning data.
+
+## Report
+Please see the [Report](Report.md) file for a description of the implemented Deep Q-Learning improvements
