@@ -79,8 +79,6 @@ class Train_Agent():
     The agent is trained for n_episodes or untill it reaches target_score.
     Each episode lasts max_t interactions.
     
-    The function keeps tract of 
-    
     Args:
     - n_episodes (int) default 2500: number of episodes to train the agent for
     
@@ -99,6 +97,10 @@ class Train_Agent():
     
     - exp_replay_alpha (float) default 0.2: Value of the priority tuning parameter alpha
       for the experience selection priority
+      
+    Returns:
+    - agent (object): Instance of agent_implementation
+    - training_data (DataFrame): contains details of the training session
     """
     
     # initialize and configure environment and agent
